@@ -1,50 +1,136 @@
-# IELTS Institute — Home Page (Vite + React + Tailwind)
+IELTS Institute — Home Page (React + Vite + Tailwind)
+Overview
 
-## What this is
-A modern, responsive single-page home page built with React (Vite) and Tailwind CSS. Component-based structure, accessible markup, and small micro-interactions (hover states + theme switch).
+Hi! I’m Meghana Tamrakar, and this is a single-page, responsive home page for a fictional IELTS Institute. I built this project to practice modern frontend development, improve React skills, and create a professional portfolio project.
 
-## Quick setup (step-by-step)
-1. **Download & extract** the project ZIP (or `git clone` if you have a repo).
-2. Open a terminal and `cd` into the project folder:
-   ```bash
-   cd ielts-institute
-   ```
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start the dev server:
-   ```bash
-   npm run dev
-   ```
-   Vite will print a local URL (usually http://localhost:5173). Open that in your browser.
-5. Build for production:
-   ```bash
-   npm run build
-   ```
-6. Preview the production build locally:
-   ```bash
-   npm run preview
-   ```
+The project demonstrates modern UI/UX design, accessibility, and responsiveness for both desktop and mobile devices.
 
-## Notes & design choices
-- Uses **Tailwind CSS** for utility-first responsive styling and rapid iteration.
-- Theme toggle stores preference in `localStorage` and toggles the `dark` class on `<html>` for Tailwind dark mode.
-- Semantic HTML and ARIA-friendly controls (nav landmarks, alt attributes, visible focus states).
-- Images are hotlinked from Unsplash for convenience — replace with local assets for production.
+Features
 
-## Deployment (Vercel / Netlify)
-- **Vercel**: import the project repo, set framework as `Vite`, build command `npm run build`, output directory `dist` — then deploy.
-- **Netlify**: drag-and-drop the `dist` folder after `npm run build`, or connect the GitHub repo and set build command `npm run build` and publish directory `dist`.
+Navbar: Logo, menu links, mobile hamburger menu, and light/dark theme switch.
 
-## Troubleshooting
-- Ensure Node.js 16+.
-- If you see a module parsing error, ensure you're running the project via Vite (`npm run dev`) and not a different bundler (e.g., old Webpack config).
-- If Tailwind utilities don't work, ensure you installed the `postcss` deps and that `tailwind.config.cjs` `content` paths include `./src/**/*.{js,jsx,ts,tsx}` and `./index.html`.
+Hero Section: Headline, supporting text, CTA button, and banner image.
 
-## Customize
-- Replace text, images and colors in `src/components/*`.
-- Add animations with `framer-motion` or CSS transitions.
+Feature Cards: 4 cards showcasing services like Speaking Practice, Mock Tests, AI Band Score, and Live Classes.
 
----
-Good luck — if you want, I can push this to a GitHub repo for you or deploy it to Vercel right now. Let me know which option you prefer.
+Student Testimonials: 3 short reviews in a responsive grid.
+
+Footer: Contact info, useful links, and copyright.
+
+Theme Switch: Light/dark mode persisted in localStorage.
+
+Accessibility: ARIA labels, focus-visible rings, and alt text for images.
+
+Micro-interactions: Hover effects, subtle transforms, smooth transitions.
+
+Motivation
+
+I created this project because I wanted to:
+
+Build a modern, responsive UI from scratch using React + Tailwind CSS.
+
+Apply component-based architecture in React.
+
+Improve accessibility and UX skills (focus rings, alt text, ARIA labels).
+
+Create a portfolio-ready project showcasing my frontend abilities.
+
+Tech Stack
+
+Frontend: React JS (with Vite)
+
+Styling: Tailwind CSS
+
+Build Tool: Vite
+
+Data: Static/mock (no backend)
+
+Folder Structure
+/ielts-institute
+├─ index.html
+├─ package.json
+├─ postcss.config.cjs
+├─ tailwind.config.cjs
+├─ vite.config.js
+├─ src/
+│  ├─ main.jsx
+│  ├─ App.jsx
+│  ├─ index.css
+│  └─ components/
+│     ├─ Navbar.jsx
+│     ├─ Hero.jsx
+│     ├─ Features.jsx
+│     ├─ Testimonials.jsx
+│     └─ Footer.jsx
+└─ README.md
+
+Getting Started
+Prerequisites
+
+Node.js v16+ (Node 18+ recommended)
+
+npm (comes with Node)
+
+Installation
+
+Clone the repository (or unzip project folder):
+
+git clone <repository-url>
+cd ielts-institute
+
+
+Install dependencies:
+
+npm install
+
+
+Start development server:
+
+npm run dev
+
+
+Open your browser at http://localhost:5173
+
+Build for Production
+npm run build
+npm run preview
+
+Design Choices
+
+Tailwind CSS: Utility-first styling for rapid and responsive design.
+
+Responsive layout: Mobile-first approach with grid and flex layouts.
+
+Accessibility:
+
+aria-label for navigation and buttons
+
+Focus-visible outline rings for keyboard navigation
+
+Alt text for all images
+
+Theme switch: Light/dark mode with localStorage persistence.
+
+Micro-interactions:
+
+Hover shadows on cards and buttons
+
+Subtle translate effects for interactive elements
+
+Smooth transition effects for better UX
+
+Personal Notes
+
+I built this to practice real-world UI challenges like hero sections, feature cards, and responsive grids.
+
+This project helped me understand React component structure, state management (theme toggle), and Tailwind responsive utilities.
+
+I plan to add animations, more interactive features, and a backend in future versions.
+
+Deployment (Optional)
+
+You can deploy this project using Vercel, Netlify, or GitHub Pages:
+
+Vercel: Connect GitHub repo → Build: npm run build → Output dir: dist
+
+Netlify: Connect GitHub repo → Build: npm run build → Publish dir: dist
